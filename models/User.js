@@ -1,48 +1,53 @@
-const { Model, DataTypes } = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-class Comment extends Model {}
+class User extends Model {
+    checkPassword(loginPW) {
+        return bcrypt.compareSync(loginPW, this.password);
+    }
+}
 
-Comment.init (
+User.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
-          },
-
-        contents: {
-            type: DataTypes.TEXT,
+            autoIncrement:true,
+        },
+        username: {
+            type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
+        },
+        password: {
+            type:DataTypes.STRING,
+            allowNull: false,
+            // Validate password length
             validate: {
-                len: [1, 150],
-            },
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false, 
-            references: {
-                model: 'user',
-                key: 'id'
-            },
-        },
-        post_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false, 
-            references: {
-                model: 'post',
-                key: 'id'
+                // Password must be at least 8 characters long
+                len: [8],
             },
         },
     },
     {
+        hooks: {
+            async beforeCreate(newUserData) {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData
+            },
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData
+            },
+        },
         sequelize,
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comment',
+        modelName: 'user',
     }
 );
 
-module.exports = Comment;
+module.exports = User;
