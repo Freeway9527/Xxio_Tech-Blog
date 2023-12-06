@@ -78,7 +78,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// User login
+// User Login
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
@@ -109,7 +109,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// User logout
+// User Logout
 router.post("/logout", (req, res) => {
   try {
     if (req.session.loggedIn) {

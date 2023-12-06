@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Get a single comment
+//Get a single comment
 router.get("/:id", async (req, res) => {
   try {
     const commentData = await Comment.findAll({
