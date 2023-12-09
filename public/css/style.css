@@ -1,0 +1,32 @@
+/* Section to style for nav bar*/
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black; /* Default color for all links */
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: white; /* Hover color for all links */
+  }
+  
+ /*
+  .navbar-dark .navbar-nav .nav-item.active .nav-link {
+    color: green; 
+  } 
+
+  /*
+  .navbar-dark .navbar-nav .nav-item.active .nav-link:hover {
+    color: blue; 
+  }
+*/
+/* End of styles for nav bar*/
+
+/* Login and sign up forms*/
+.login-form {
+    color: black;
+  }
+
+.login-link {
+    color: black;
+  }
+
+/* End Login and sign up forms*/
