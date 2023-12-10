@@ -11,17 +11,23 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username']
+          attributes: ["username"],
         },
         {
           model: Comment,
-          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          attributes: [
+            "id",
+            "comment_text",
+            "post_id",
+            "user_id",
+            "created_at",
+          ],
           include: {
             model: User,
-            attributes: ['username']
-          }
-        }
-      ]
+            attributes: ["username"],
+          },
+        },
+      ],
     });
     res.json(postData);
   } catch (err) {
@@ -39,17 +45,23 @@ router.get("/:id", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username']
+          attributes: ["username"],
         },
         {
           model: Comment,
-          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          attributes: [
+            "id",
+            "comment_text",
+            "post_id",
+            "user_id",
+            "created_at",
+          ],
           include: {
             model: User,
-            attributes: ['username']
-          }
-        }
-      ]
+            attributes: ["username"],
+          },
+        },
+      ],
     });
 
     if (!postData) {

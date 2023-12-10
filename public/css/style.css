@@ -97,3 +97,17 @@
 }
 /* End hover effects for create/update/delete button */
 
+/* Styles for the textarea */
+textarea.form-input {
+  width: 100%;
+  height: 200px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+
+/* End Styles for the textarea */

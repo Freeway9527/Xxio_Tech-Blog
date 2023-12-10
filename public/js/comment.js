@@ -4,7 +4,7 @@ const commentFormHandler = async (event) => {
   // Get the comment text from the form
   try {
     const comment_text = document
-      .querySelector('input[name="comment-body"]')
+      .querySelector('textarea[name="comment-body"]')
       .value.trim();
 
     const post_id = window.location.toString().split("/").pop();
