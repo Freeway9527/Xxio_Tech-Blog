@@ -1,40 +1,81 @@
-/* Section to style for nav bar*/
+/* Section to style for nav bar */
 
 .navbar-dark .navbar-nav .nav-link {
-    color: black; /* Default color for all links */
-  }
-  
-  .navbar-dark .navbar-nav .nav-link:hover {
-    color: white; /* Hover color for all links */
-  }
-  
- /*
-  .navbar-dark .navbar-nav .nav-item.active .nav-link {
-    color: green; 
-  } 
-
-  /*
-  .navbar-dark .navbar-nav .nav-item.active .nav-link:hover {
-    color: blue; 
-  }
-*/
-/* End of styles for nav bar*/
-
-/* Login and sign up forms*/
-.login-form {
-    color: black;
-  }
-
-.login-link {
-    color: black;
-  }
-
-.form-signin {
-    color: black;
-    width: 100%;
-    max-width: 500px;
-    padding: 15px;
-    margin: auto; 
+  color: black; /* Default color for all links */
 }
 
-/* End Login and sign up forms*/
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white; /* Hover color for all links */
+}
+
+/*
+.navbar-dark .navbar-nav .nav-item.active .nav-link {
+  color: green; 
+} 
+
+/*
+.navbar-dark .navbar-nav .nav-item.active .nav-link:hover {
+  color: blue; 
+}
+*/
+/* End of styles for nav bar */
+
+/*tech blog style*/
+.container-fluid.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+.navbar-brand {
+  margin: 0; /* Reset any default margin */
+ 
+}
+
+.no-hover-effect {
+  pointer-events: none; /* Disable pointer events */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+}
+
+
+
+
+/* End tech blog style */
+
+
+/**/
+.form-signin {
+  color: black;
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  margin: auto;
+}
+
+.login-form {
+  color: black;
+}
+
+.login-link {
+  color: black;
+}
+
+
+/**/
+
+.card {
+  margin-top: 20px;
+}
+.card-header {
+  padding-top: 20px;
+ 
+}
+
+.card-header h4 a,
+.card-body .card-text {
+  color: black;
+
+}
+
