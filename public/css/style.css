@@ -20,17 +20,16 @@
 */
 /* End of styles for nav bar */
 
+
 /*tech blog style*/
 .container-fluid.text-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  
- 
 }
+
 .navbar-brand {
   margin: 0; /* Reset any default margin */
- 
 }
 
 .no-hover-effect {
@@ -38,14 +37,10 @@
   text-decoration: none; /* Remove underline */
   color: inherit; /* Inherit text color */
 }
-
-
-
-
 /* End tech blog style */
 
 
-/**/
+/* signin/login form*/
 .form-signin {
   color: black;
   width: 100%;
@@ -61,21 +56,44 @@
 .login-link {
   color: black;
 }
+/* End signin/login form*/
 
 
-/**/
-
+/* Handle comment cards */
 .card {
   margin-top: 20px;
 }
 .card-header {
   padding-top: 20px;
- 
 }
 
 .card-header h4 a,
 .card-body .card-text {
   color: black;
-
 }
+/* Handle comment cards */
+
+/* Sytle for link*/
+.link {
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Set the font size to your desired value */
+  /* Add any additional styling here */
+}
+/* End of styles for links*/
+
+
+/* hover effects for create/update/delete button */
+.button-with-hover {
+  background-color: gray;
+  transition: background-color 0.3s;
+}
+
+.button-with-hover:hover {
+  background-color: lightgray;
+}
+
+.delete-post-btn:hover {
+  background-color: rgb(203, 36, 36);
+}
+/* End hover effects for create/update/delete button */
 
