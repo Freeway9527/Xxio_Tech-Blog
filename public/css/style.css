@@ -31,6 +31,10 @@
 
 .form-signin {
     color: black;
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: auto; 
 }
 
 /* End Login and sign up forms*/
