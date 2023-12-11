@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
-  // For local development or backup configuration
+
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
@@ -13,7 +13,7 @@ if (process.env.JAWSDB_URL) {
     {
      host: 'localhost',
       dialect: 'mysql',
-      port: 3306
+      port: process.env.DB_PORT, //change to 3306 for local testing
     }
   );
 }
