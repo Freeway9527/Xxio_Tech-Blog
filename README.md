@@ -6,6 +6,10 @@
 
 ## Description
 A Tech Blog website is builded using the Model View Controller (MVC) design. This webpage allows the user to post/comment/edit and delete post.
+![Alt text](asset/techBlogSS1.png)
+![Alt text](asset/techBlogSS2.png)
+![Alt text](asset/techBlogSS3.png)
+![Alt text](asset/techBlogSS4.png)
 
 ## Table of Contents
 1. [Installation](#installation)
