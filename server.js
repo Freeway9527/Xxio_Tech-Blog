@@ -13,7 +13,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 
 // Define port
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 10000; //change to 3001 for local testing
 
 // Create Instance of Handlebars
 const hbs = exphbs.create({ helpers }); //add back helpers 
@@ -48,10 +48,11 @@ app.use(routes);
 
 
 //Sync models with database and start server
-sequelize.sync({ force: false }).then(() => {
-   app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
-});
 
-//app.listen(PORT, () => {
-   // console.log(`Now listening on port ${PORT}`);
+//sequelize.sync({ force: false }).then(() => {
+   //app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 //});
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Now listening on port ${PORT}`);
+});
