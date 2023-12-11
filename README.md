@@ -5,7 +5,7 @@
 </p>
 
 ## Description
-
+A Tech Blog website is builded using the Model View Controller (MVC) design. This webpage allows the user to post/comment/edit and delete post.
 
 ## Table of Contents
 1. [Installation](#installation)
@@ -17,6 +17,44 @@
 7. [Contact](#contact)
 
 ## Installation
+Make sure that you have Node.js install, if you do not have node.js, you can visit [Node.js website](https://nodejs.org/en).
+
+You will also need to add dependencies, in your terminal type in:
+
+```
+npm init
+```
+```
+npm i express
+```
+```
+npm install mysql2
+```
+```
+npm install sequelize
+```
+```
+npm install connect-session-sequelize
+```
+```
+npm install dotenv
+```
+```
+npm install bcrypt
+```
+```
+npm install express-handlebars
+```
+```
+npm install express-session
+```
+```
+npm install handlebars
+```
+```
+npm install seed
+```
+
 
 
 ## Technologies
@@ -30,6 +68,34 @@
 </p>
 
 ## Usage
+Make sure you rename the `.env.EXAMPLE` file to `.env` Copy and paste the following lines of codes. 
+
+```
+DB_NAME=''
+DB_USER=''
+DB_PASSWORD=''
+```
+Than enter your information according to the data base and your information.
+
+To run the program, in your teminal type in:
+```
+mysql -u root -p
+```
+Enter your password when you are prompt, if you do not have a password just hit enter.
+```
+source db/schema.sql
+```
+```
+Exit
+```
+
+```
+npm run seed
+```
+```
+npm start
+```
+
 
 ## Credit
 

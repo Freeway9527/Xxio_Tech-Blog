@@ -32,6 +32,14 @@ const newFormHandler = async (event) => {
   }
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+
+  if (navbar) {
+    navbar.style.display = "none";
+  }
+});
+
 document
   .querySelector("#add-post-form")
   .addEventListener("submit", newFormHandler);
